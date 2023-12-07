@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Quarto output
+/.quarto/
+_site/

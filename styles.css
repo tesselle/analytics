@@ -1,1 +1,29 @@
 /* css styles */
+.logo-institution {
+  height: 72px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#hero-banner {
+  padding-top: 35px;
+  background-color: rgb(237,243,249);
+}
+
+#quarto-content main {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.headline {
+  font-size: 1.25em;
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+
+.headline p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}

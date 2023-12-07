@@ -1,0 +1,14 @@
+- category: Shiny apps
+  description: |
+    Work in progress! Don't use it for anything serious.
+  tiles:
+    - title: seriation
+      subtitle: Correspondance analysis based seriation
+      href: https://analytics.huma-num.fr/tesselle/seriation/
+      icon: fa-sort-amount-down
+      thumbnail: images/thumbnail.png
+    - title: coda
+      subtitle: Compositional data analysis
+      href: https://analytics.huma-num.fr/tesselle/coda/
+      icon: fa-sort-amount-down
+      thumbnail: images/thumbnail.png
