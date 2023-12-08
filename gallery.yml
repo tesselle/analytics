@@ -5,10 +5,12 @@
     - title: seriation
       subtitle: Correspondance analysis based seriation
       href: https://analytics.huma-num.fr/tesselle/seriation/
-      icon: fa-sort-amount-down
+      thumbnail: images/thumbnail.png
+    - title: ternary
+      subtitle: Ternary Plot
+      href: https://analytics.huma-num.fr/tesselle/ternary/
       thumbnail: images/thumbnail.png
     - title: coda
       subtitle: Compositional data analysis
       href: https://analytics.huma-num.fr/tesselle/coda/
-      icon: fa-sort-amount-down
       thumbnail: images/thumbnail.png
