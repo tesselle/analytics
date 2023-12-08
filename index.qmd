@@ -1,5 +1,5 @@
 ---
-pagetitle: "Shiny apps"
+pagetitle: "tesselle: Shiny Apps for the Archaeologist"
 listing:
   - id: gallery
     template: gallery.ejs
@@ -10,7 +10,7 @@ listing:
 ::: {.grid .column-page}
 ::: {.headline .g-col-lg-6 .g-col-12 .g-col-md-12}
 # Welcome
-This portal provides access to a range of web applications built on the R packages of the **tesselle** project. Learn more at [tesselle.org](https://www.tesselle.org).
+This portal provides access to a range of web applications built on the [R packages](https://packages.tesselle.org) of the [**tesselle**](https://www.tesselle.org) project.
 
 These applications can be used to explore and analyze common data types in archaeology. They are distributed in the hope that they will be useful, but WITHOUT ANY WARRANTY.
 
