@@ -1,16 +1,17 @@
-- category: Shiny apps
+- category: Data analysis
   description: |
     Work in progress! Don't use it for anything serious.
   tiles:
-    - title: seriation
-      subtitle: Correspondance analysis based seriation
-      href: https://analytics.huma-num.fr/tesselle/seriation/
+    - title: kairos
+      subtitle: Matrix seriation
       thumbnail: images/thumbnail.png
-    - title: ternary
-      subtitle: Ternary Plot
-      href: https://analytics.huma-num.fr/tesselle/ternary/
-      thumbnail: images/thumbnail.png
-    - title: coda
+    - title: nexus
       subtitle: Compositional data analysis
-      href: https://analytics.huma-num.fr/tesselle/coda/
+      thumbnail: images/thumbnail.png
+- category: Toolbox
+  description: |
+    Work in progress! Don't use it for anything serious.
+  tiles:
+    - title: isopleuros
+      subtitle: Ternary Plot
       thumbnail: images/thumbnail.png
