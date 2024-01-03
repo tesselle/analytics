@@ -4,7 +4,7 @@ project:
 website:
   title: "analytics.tesselle"
 
-  site-url: https://analytics.huma-num.fr/tesselle/
+  site-url: https://analytics.huma-num.fr/tesselle/home/
   repo-url: https://github.com/tesselle/analytics
   repo-actions: [edit, issue]
 
