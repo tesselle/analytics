@@ -1,16 +1,14 @@
-- category: Data analysis
-  description: |
-    Work in progress! Don't use it for anything serious.
+- category: Computational Suite for Archaeologists
+  description: ""
   tiles:
-    - title: kairos
-      subtitle: Matrix seriation
-      thumbnail: images/thumbnail.png
     - title: nexus
       subtitle: Compositional data analysis
       thumbnail: images/thumbnail.png
+    - title: kairos
+      subtitle: Matrix seriation
+      thumbnail: images/thumbnail.png
 - category: Toolbox
-  description: |
-    Work in progress! Don't use it for anything serious.
+  description: ""
   tiles:
     - title: isopleuros
       subtitle: Ternary Plot
