@@ -1,15 +1,15 @@
 - category: Computational Suite for Archaeologists
   description: ""
   tiles:
-    - title: nexus
+    - title: source
       subtitle: Compositional data analysis
       thumbnail: images/thumbnail.png
-    - title: kairos
+    - title: seriate
       subtitle: Matrix seriation
       thumbnail: images/thumbnail.png
 - category: Toolbox
   description: ""
   tiles:
-    - title: isopleuros
+    - title: ternary
       subtitle: Ternary Plot
       thumbnail: images/thumbnail.png
