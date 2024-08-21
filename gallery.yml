@@ -3,13 +3,10 @@
   tiles:
     - title: source
       subtitle: Compositional data analysis
-      thumbnail: images/thumbnail.png
     - title: seriate
       subtitle: Matrix seriation
-      thumbnail: images/thumbnail.png
 - category: Toolbox
   description: ""
   tiles:
     - title: ternary
       subtitle: Ternary Plot
-      thumbnail: images/thumbnail.png
