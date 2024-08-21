@@ -6,8 +6,9 @@ listing:
     contents: gallery.yml
 ---
 
-::: {#hero-banner .column-screen}
-::: {.grid .column-page}
+::: {#hero-banner}
+::: {.column-page}
+::: {.grid}
 ::: {.headline .g-col-lg-6 .g-col-12 .g-col-md-12}
 # Welcome
 This portal provides access to a range of web applications built on the [R packages](https://packages.tesselle.org) of the [**tesselle**](https://www.tesselle.org) project.
@@ -26,6 +27,7 @@ knitr::include_graphics("images/tesselle.png")
 ```
 :::
 
+:::
 :::
 :::
 
