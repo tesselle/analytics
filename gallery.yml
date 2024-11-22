@@ -1,10 +1,17 @@
 - category: Computational Suite for Archaeologists
   description: ""
   tiles:
+    - title: seriation
+      subtitle: Matrix seriation
     - title: source
       subtitle: Compositional data analysis
-    - title: seriate
-      subtitle: Matrix seriation
+- category: Analysis
+  description: ""
+  tiles:
+    - title: pca
+      subtitle: Principal Components Analysis
+    - title: ca
+      subtitle: Correspondence Analysis
 - category: Toolbox
   description: ""
   tiles:
