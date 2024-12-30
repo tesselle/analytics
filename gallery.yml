@@ -1,6 +1,8 @@
 - category: Computational Suite for Archaeologists
   description: ""
   tiles:
+    - title: diversity
+      subtitle: Diversity Measures
     - title: seriation
       subtitle: Matrix seriation
     - title: source
