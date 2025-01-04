@@ -13,11 +13,13 @@ Description: A dashboard of the 'shiny' applications for the 'tesselle'
 License: GPL (>= 3)
 URL: https://github.com/tesselle/analytics
 BugReports: https://github.com/tesselle/analytics/issues
+Depends: 
+    R (>= 4.1),
+    shiny (>= 1.10.0)
 Imports:
     bslib (>= 0.8.0),
     kinesis,
-    ggplot2 (>= 3.5.1),
-    shiny (>= 1.10.0)
+    ggplot2 (>= 3.5.1)
 Additional_repositories: https://tesselle.r-universe.dev
 Encoding: UTF-8
 LazyData: true

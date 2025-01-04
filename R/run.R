@@ -18,7 +18,7 @@
 run_dashboard <- function(..., log_path = NULL,
                           options = list(launch.browser = interactive())) {
   app_dir <- system.file("dashboard", package = "analytics")
-  obj <- shiny::shinyAppDir(appDir = app_dir, options = options)
+  obj <- shinyAppDir(appDir = app_dir, options = options)
   obj$appOptions$log_path <- log_path
   obj
 }

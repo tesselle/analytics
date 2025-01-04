@@ -7,22 +7,26 @@
 #' @keywords internal
 #' @noRd
 function(input, output, session) {
+  ## Add resources -----
+  path <- system.file("static", package = "analytics")
+  addResourcePath(prefix = "static", directoryPath = path)
+
   ## Helpers -----
   build_card <- function(x) {
     bslib::card(
       bslib::card_header(
-        htmltools::a(
+        tags$a(
           x$title,
-          href=sprintf("https://analytics.huma-num.fr/tesselle/%s", tolower(x$name)),
-          target="_blank",
-          class="card-link stretched-link"
+          href = sprintf("https://analytics.huma-num.fr/tesselle/%s", tolower(x$name)),
+          target = "_blank",
+          class = "card-link stretched-link"
         )
       ),
       bslib::card_body(
-        htmltools::img(
-          src=sprintf("static/%s.png", tolower(x$name)),
-          alt=x$title,
-          class="card-img-bottom"
+        tags$img(
+          src = sprintf("static/%s.png", tolower(x$name)),
+          alt = x$title,
+          class = "card-img-bottom"
         )
       ),
       fill = FALSE
@@ -50,7 +54,7 @@ function(input, output, session) {
 
   ## Logs -----
   usage <- reactive({
-    path <- shiny::getShinyOption("log_path")
+    path <- getShinyOption("log_path")
     if (is.null(path) || !dir.exists(path)) return(NULL)
     logs <- list.files(path, pattern = ".log", full.names = FALSE)
     if (length(logs) == 0) return(NULL)

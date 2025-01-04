@@ -4,18 +4,16 @@
 #' @keywords internal
 #' @noRd
 bslib::page_navbar(
-  title = "Shiny Apps for the Archaeologist",
+  title = "Web Apps for the Archaeologist",
   sidebar = bslib::sidebar(
+    width = 300,
     title = "Welcome!",
     withTags(
       div(
-        img(
-          src = "static/tesselle.png",
-          alt = "Logo of the tesselle project.",
-          style = "width: 100%"
-        ),
         p(
-          "This portal provides access to a range of web applications built on the",
+          "This portal provides access to a range of",
+          a("shiny", href = "https://shiny.posit.co", target = "_blank"),
+          "applications built on the",
           a("R packages", href = "https://packages.tesselle.org", target = "_blank"),
           "of the",
           a(strong("tesselle"), href = "https://www.tesselle.org", target = "_blank"),
@@ -31,6 +29,11 @@ bslib::page_navbar(
           "and",
           a("IN2P3 Computing Center", href = "https://www.in2p3.cnrs.fr/fr", target = "_blank"),
           "."
+        ),
+        img(
+          src = "static/tesselle.png",
+          alt = "Logo of the tesselle project.",
+          style = "width: 75%; margin: auto;"
         )
       )
     )
