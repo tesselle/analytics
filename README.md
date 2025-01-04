@@ -36,9 +36,3 @@ library(analytics)
 ## Run the dashboard
 run_dashboard()
 ```
-
-## Contributing
-
-Please note that the **kinesis** project is released with a [Contributor
-Code of Conduct](https://www.tesselle.org/conduct.html). By contributing
-to this project, you agree to abide by its terms.
