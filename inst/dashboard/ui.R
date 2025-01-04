@@ -46,11 +46,13 @@ bslib::page_navbar(
     class = "bslib-page-dashboard",
     bslib::card(
       bslib::card_header("Number of connections per app"),
-      plotOutput(outputId = "plot_app")
+      plotOutput(outputId = "plot_app"),
+      full_screen = TRUE
     ),
     bslib::card(
       bslib::card_header("Number of connections per day"),
-      plotOutput(outputId = "plot_day")
+      plotOutput(outputId = "plot_day"),
+      full_screen = TRUE
     )
   ),
   footer = kinesis::footer_ui("footer"),

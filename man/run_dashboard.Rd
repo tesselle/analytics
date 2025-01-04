@@ -4,10 +4,16 @@
 \alias{run_dashboard}
 \title{Run the Dashboard}
 \usage{
-run_dashboard(..., options = list(launch.browser = interactive()))
+run_dashboard(
+  ...,
+  log_path = NULL,
+  options = list(launch.browser = interactive())
+)
 }
 \arguments{
 \item{...}{Currently not used.}
+
+\item{log_path}{A \code{\link{character}} string giving the path to the log files.}
 
 \item{options}{A \code{\link{list}} of named options that should be passed to the
 \code{\link[shiny:shinyApp]{shiny::shinyAppDir()}} call.}

@@ -50,23 +50,25 @@ function(input, output, session) {
 
   ## Logs -----
   usage <- reactive({
-    path <- "../log/"
-    if (!dir.exists(path)) return(NULL)
+    path <- shiny::getShinyOption("log_path")
+    if (is.null(path) || !dir.exists(path)) return(NULL)
     logs <- list.files(path, pattern = ".log", full.names = FALSE)
     if (length(logs) == 0) return(NULL)
     info <- do.call(rbind, strsplit(logs, split = "-"))
     x <- as.data.frame(table(info[, 1], info[, 3], dnn = list("App", "Date")))
     x$Date <- as.Date(x$Date, format = "%Y%m%d")
     x
-  })
+  }) |>
+    bindCache(Sys.Date())
 
   output$plot_app <- renderPlot({
     req(usage())
     x <- aggregate(Freq ~ App, data = usage(), FUN = sum)
-    x <- x[order(x$Freq), ]
+    x$App <- factor(x$App, levels = x$App[order(x$Freq)])
     ggplot2::ggplot(data = x) +
       ggplot2::aes(x = Freq, y = App) +
       ggplot2::geom_col(orientation = "y") +
+      ggplot2::scale_x_continuous(limits = c(0, NA), expand = c(0, 0.05)) +
       ggplot2::theme_bw() +
       ggplot2::theme(
         axis.title = ggplot2::element_blank()
@@ -76,7 +78,6 @@ function(input, output, session) {
   output$plot_day <- renderPlot({
     req(usage())
     x <- aggregate(Freq ~ Date, data = usage(), FUN = sum)
-    x <- x[order(x$Date), ]
     ggplot2::ggplot(data = x) +
       ggplot2::aes(x = Date, y = Freq) +
       ggplot2::geom_col(orientation = "x") +
