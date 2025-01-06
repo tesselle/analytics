@@ -4,7 +4,8 @@
 #' @keywords internal
 #' @noRd
 bslib::page_navbar(
-  title = "Web Apps for the Archaeologist",
+  title = "tesselle",
+  window_title = "Web Apps for the Archaeologist",
   sidebar = bslib::sidebar(
     width = 300,
     title = "Welcome!",
@@ -42,6 +43,7 @@ bslib::page_navbar(
   bslib::nav_panel(
     title = "Apps",
     class = "bslib-page-dashboard",
+    h1("Web Apps for the Archaeologist"),
     uiOutput(outputId = "apps")
   ),
   bslib::nav_panel(
