@@ -26,10 +26,8 @@ bslib::page_navbar(
         ),
         p(
           "Computing resources are provided by the CNRS",
-          a("IR* Huma-Num", href = "https://www.huma-num.fr", target = "_blank"),
-          "and",
-          a("IN2P3 Computing Center", href = "https://www.in2p3.cnrs.fr/fr", target = "_blank"),
-          "."
+          a("IR* Huma-Num", href = "https://www.huma-num.fr", target = "_blank"), "and",
+          a("IN2P3 Computing Center.", href = "https://www.in2p3.cnrs.fr/fr", target = "_blank")
         ),
         img(
           src = "static/tesselle.png",
@@ -60,7 +58,6 @@ bslib::page_navbar(
       full_screen = TRUE
     )
   ),
-  footer = kinesis::footer_ui("footer"),
   theme = bslib::bs_theme(version = "5"),
   lang = "en",
   collapsible = TRUE

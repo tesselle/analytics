@@ -11,6 +11,11 @@ function(input, output, session) {
   path <- system.file("static", package = "analytics")
   addResourcePath(prefix = "static", directoryPath = path)
 
+  ## List apps -----
+  apps <- yaml::read_yaml(
+    file = system.file("dashboard", "config.yml", package = "analytics")
+  )
+
   ## Helpers -----
   build_card <- function(x) {
     bslib::card(
@@ -34,10 +39,6 @@ function(input, output, session) {
   }
 
   ## Apps -----
-  app_paths <- system.file("app", package = "kinesis")
-  app_names <- list.dirs(app_paths, full.names = FALSE, recursive = FALSE)
-  apps <- lapply(X = app_names, FUN = kinesis::get_config)
-
   output$apps <- renderUI({
     breaks <- bslib::breakpoints(
       xs = 12,
@@ -54,16 +55,25 @@ function(input, output, session) {
 
   ## Logs -----
   usage <- reactive({
+    ## List files
     path <- getShinyOption("log_path")
     if (is.null(path) || !dir.exists(path)) return(NULL)
     logs <- list.files(path, pattern = ".log", full.names = FALSE)
     if (length(logs) == 0) return(NULL)
+
+    ## Get info
     info <- do.call(rbind, strsplit(logs, split = "-"))
-    x <- as.data.frame(table(info[, 1], info[, 3], dnn = list("App", "Date")))
-    x$Date <- as.Date(x$Date, format = "%Y%m%d")
-    x
+    app_names <- vapply(X = apps, FUN = getElement, FUN.VALUE = character(1),
+                        name = "name")
+    info <- info[info[, 1] %in% app_names, , drop = FALSE]
+
+    ## Compute usage statistics
+    info <- table(info[, 1], info[, 3], dnn = list("App", "Date"))
+    info <- as.data.frame(info)
+    info$Date <- as.Date(info$Date, format = "%Y%m%d")
+    info
   }) |>
-    bindCache(Sys.Date())
+    bindCache(Sys.Date(), cache = "app")
 
   output$plot_app <- renderPlot({
     req(usage())
@@ -91,6 +101,5 @@ function(input, output, session) {
       )
   })
 
-  kinesis::footer_server("footer")
   session$onSessionEnded(stopApp)
 }
