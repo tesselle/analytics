@@ -10,7 +10,7 @@ bslib::page_navbar(
     width = 300,
     title = "Welcome!",
     withTags(
-      div(
+      list(
         p(
           "This portal provides access to a range of",
           a("shiny", href = "https://shiny.posit.co", target = "_blank"),
@@ -30,7 +30,7 @@ bslib::page_navbar(
           a("IN2P3 Computing Center.", href = "https://www.in2p3.cnrs.fr/fr", target = "_blank")
         ),
         img(
-          src = "static/tesselle.png",
+          src = "tesselle.png",
           alt = "Logo of the tesselle project.",
           style = "width: 75%; margin: auto;"
         )

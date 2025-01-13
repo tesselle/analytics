@@ -7,10 +7,6 @@
 #' @keywords internal
 #' @noRd
 function(input, output, session) {
-  ## Add resources -----
-  path <- system.file("static", package = "analytics")
-  addResourcePath(prefix = "static", directoryPath = path)
-
   ## List apps -----
   apps <- yaml::read_yaml(
     file = system.file("dashboard", "config.yml", package = "analytics")
@@ -29,7 +25,7 @@ function(input, output, session) {
       ),
       bslib::card_body(
         tags$img(
-          src = sprintf("static/%s.png", tolower(x$name)),
+          src = sprintf("%s.png", tolower(x$name)),
           alt = x$title,
           class = "card-img-bottom"
         )
